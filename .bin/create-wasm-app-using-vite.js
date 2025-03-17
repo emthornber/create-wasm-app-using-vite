@@ -12,13 +12,13 @@ if (process.argv.length >= 3) {
   }
 }
 
-const clone = spawn("git", ["clone", "https://github.com/rustwasm/create-wasm-app.git", folderName]);
+const clone = spawn("git", ["clone", "https://github.com/emthornber/create-wasm-app-using-vite.git", folderName]);
 
 clone.on("close", code => {
   if (code !== 0) {
     console.error("cloning the template failed!")
     process.exit(code);
   } else {
-    console.log("🦀 Rust + 🕸 Wasm = ❤");
+    console.log("🦀 Rust + 🕸 Wasm + Vite = ❤");
   }
 });

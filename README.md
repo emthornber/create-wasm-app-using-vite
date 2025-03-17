@@ -2,10 +2,10 @@
 
   <h1><code>create-wasm-app</code></h1>
 
-  <strong>An <code>npm init</code> template for kick starting a project that uses NPM packages containing Rust-generated WebAssembly and bundles them with Webpack.</strong>
+  <strong>An <code>npm init</code> template for kick starting a project that uses NPM packages containing Rust-generated WebAssembly and bundles them using Vite.</strong>
 
   <p>
-    <a href="https://travis-ci.org/rustwasm/create-wasm-app"><img src="https://img.shields.io/travis/rustwasm/create-wasm-app.svg?style=flat-square" alt="Build Status" /></a>
+    <a href="https://travis-ci.org/emthornber/create-wasm-app-using-vite"><img src="https://img.shields.io/travis/emthornber/create-wasm-app-using-vite.svg?style=flat-square" alt="Build Status" /></a>
   </p>
 
   <h3>
@@ -14,7 +14,7 @@
     <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
   </h3>
 
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
+  <sub>Built with 🦀🕸 by <a href="https://emthornber.github.io/">Mark Thornber using a fork from the Rust and WebAssembly Working Group</a></sub>
 </div>
 
 ## About
@@ -32,30 +32,30 @@ Rust-generated WebAssembly and using them to create a Website.
 ## 🚴 Usage
 
 ```
-npm init wasm-app
+npm init wasm-app-using-vite
 ```
 
 ## 🔋 Batteries Included
 
-- `.gitignore`: ignores `node_modules`
-- `LICENSE-APACHE` and `LICENSE-MIT`: most Rust projects are licensed this way, so these are included for you
-- `README.md`: the file you are reading now!
-- `index.html`: a bare bones html document that includes the webpack bundle
-- `index.js`: example js file with a comment showing how to import and use a wasm pkg
-- `package.json` and `package-lock.json`:
-  - pulls in devDependencies for using webpack:
-      - [`webpack`](https://www.npmjs.com/package/webpack)
-      - [`webpack-cli`](https://www.npmjs.com/package/webpack-cli)
-      - [`webpack-dev-server`](https://www.npmjs.com/package/webpack-dev-server)
-  - defines a `start` script to run `webpack-dev-server`
-- `webpack.config.js`: configuration file for bundling your js with webpack
+* `.gitignore`: ignores `node_modules`
+* `LICENSE-APACHE` and `LICENSE-MIT`: most Rust projects are licensed this way, so these are included for you
+* `README.md`: the file you are reading now!
+* `index.html`: a bare bones html document that includes the vite bundle
+* `index.js`: example js file with a comment showing how to import and use a wasm pkg
+* `package.json` and `package-lock.json`:
+  * pulls in devDependencies for using vite:
+    * [`vite`](https://www.npmjs.com/package/vite)
+    * [`vite-plugin-top-level-await`](https://www.npmjs.com/package/vite-plugin-top-level-await)
+    * [`vite-plugin-wasm`](https://www.npmjs.com/package/vite-plugin-wasm)
+  * defines a `start` script to run `vite preview`
+* `vite.config.js`: configuration file for bundling your js with webpack
 
 ## License
 
 Licensed under either of
 
-* Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-* MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+* Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or <http://www.apache.org/licenses/LICENSE-2.0>)
+* MIT license ([LICENSE-MIT](LICENSE-MIT) or <http://opensource.org/licenses/MIT>)
 
 at your option.
 
